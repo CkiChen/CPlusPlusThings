@@ -24,19 +24,19 @@ int main(){
     B b1,*pB;
     a1.setA(1);
     b1.setA(2);
-    //°ÑÅÉÉúÀà¶ÔÏó¸³Öµ¸ø»ùÀà¶ÔÏó¡£
+    //æŠŠæ´¾ç”Ÿç±»å¯¹è±¡èµ‹å€¼ç»™åŸºç±»å¯¹è±¡ã€‚
     a1=b1;                  
     cout<<a1.getA()<<endl;		
     cout<<b1.getA()<<endl; 		
     a1.setA(10);              
-    cout<<a1.getA()<<endl;		
-    cout<<b1.getA()<<endl;	
-    //°ÑÅÉÉúÀà¶ÔÏóµÄµØÖ·¸³Öµ¸ø»ùÀàÖ¸Õë¡£	 	
+    cout<<a1.getA()<<endl;	   //10	
+    cout<<b1.getA()<<endl;	  //2
+    //æŠŠæ´¾ç”Ÿç±»å¯¹è±¡çš„åœ°å€èµ‹å€¼ç»™åŸºç±»æŒ‡é’ˆã€‚	 	
     pA=&b1;  
     pA->setA(20);            
     cout<<pA->getA()<<endl;	    
     cout<<b1.getA()<<endl;	
-    //ÓÃÅÉÉúÀà¶ÔÏó³õÊ¼»¯»ùÀà¶ÔÏóµÄÒıÓÃ¡£
+    //ç”¨æ´¾ç”Ÿç±»å¯¹è±¡åˆå§‹åŒ–åŸºç±»å¯¹è±¡çš„å¼•ç”¨ã€‚
     A &ra=b1;                                    
     ra.setA(30);               
     cout<<pA->getA()<<endl;		
@@ -45,7 +45,7 @@ int main(){
     cout<<b1.getA()<<endl;		    
     f1(b1,100); 
     cout<<"1111111111"<<endl;
-    cout<<b1.getA()<<endl;	//7	    
+    cout<<b1.getA()<<endl;	//7	  ä¼ å€¼ ä¸ä¼ åœ°å€    
     f2(&b1,200);
     cout<<b1.getA()<<endl;		    
     f3(b1,300);
